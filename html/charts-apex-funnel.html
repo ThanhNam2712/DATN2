@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Calendar Month Grid | StarCode & Dashboard Template</title>
+    <title>Funnel Charts | StarCode & Dashboard Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta content="Minimal Admin & Dashboard Template" name="description">
     <meta content="StarCode Kh" name="author">
@@ -354,7 +354,6 @@
                                         </ul>
                                     </div>
                                 </li>
-                                
                                 <li class="group-data-[layout=horizontal]:relative group/sub relative">
                                     <a class="dropdown-button relative flex items-center px-6 py-2 text-vertical-menu-item-font-size transition-all duration-75 ease-linear text-vertical-menu-sub-item hover:text-vertical-menu-sub-item-hover [&.active]:text-vertical-menu-sub-item-active before:absolute ltr:before:left-1.5 rtl:before:right-1.5 before:top-4 before:w-1 before:h-1 before:rounded before:transition-all before:duration-75 before:ease-linear before:bg-vertical-menu-sub-item hover:before:bg-vertical-menu-sub-item-hover [&.active]:before:bg-vertical-menu-sub-item-active group-data-[sidebar=dark]:text-vertical-menu-sub-item-dark group-data-[sidebar=dark]:dark:text-zink-200 group-data-[sidebar=dark]:hover:text-vertical-menu-sub-item-hover-dark group-data-[sidebar=dark]:[&.active]:text-vertical-menu-sub-item-active-dark group-data-[sidebar=dark]:before:bg-vertical-menu-sub-item-dark/50 group-data-[sidebar=dark]:hover:before:bg-vertical-menu-sub-item-hover-dark group-data-[sidebar=dark]:[&.active]:before:text-vertical-menu-sub-item-active-dark group-data-[sidebar=brand]:text-vertical-menu-sub-item-brand group-data-[sidebar=brand]:hover:text-vertical-menu-sub-item-hover-brand group-data-[sidebar=brand]:before:bg-vertical-menu-sub-item-brand/80 group-data-[sidebar=brand]:hover:before:bg-vertical-menu-sub-item-hover-brand/80 group-data-[sidebar=brand]:[&.active]:before:bg-vertical-menu-sub-item-active-brand/80 group-data-[sidebar=brand]:[&.active]:text-vertical-menu-sub-item-active-brand group-data-[sidebar=modern]:text-vertical-menu-sub-item-modern group-data-[sidebar=modern]:before:bg-vertical-menu-sub-item-modern/70 group-data-[sidebar=modern]:hover:text-vertical-menu-sub-item-hover-modern group-data-[sidebar=modern]:before:hover:bg-vertical-menu-sub-item-hover-modern group-data-[sidebar=modern]:[&.active]:text-vertical-menu-sub-item-active-modern group-data-[sidebar=modern]:before:[&.active]:text-vertical-menu-sub-item-active-modern group-data-[sidebar-size=md]:before:hidden group-data-[sidebar-size=md]:text-center group-data-[sidebar-size=md]:block group-data-[sidebar-size=sm]:before:hidden group-data-[layout=horizontal]:px-5 [&.dropdown-button]:after:absolute [&.dropdown-button]:[&.show]:after:content-['\ea4e'] [&.dropdown-button]:after:content-['\ea6e'] [&.dropdown-button]:after:font-remix ltr:[&.dropdown-button]:after:right-5 rtl:[&.dropdown-button]:after:left-5 [&.dropdown-button]:after:text-16 group-data-[sidebar-size=sm]:[&.dropdown-button]:after:hidden group-data-[sidebar-size=md]:[&.dropdown-button]:after:hidden group-data-[layout=horizontal]:before:left-[1.4rem] group-data-[layout=horizontal]:md:before:hidden group-data-[layout=horizontal]:ltr:pl-10 group-data-[layout=horizontal]:rtl:pr-10 group-data-[layout=horizontal]:ltr:pr-5 group-data-[layout=horizontal]:rtl:pl-5 group-data-[layout=horizontal]:md:!px-5 show" href="#!">
                                         <span class="align-middle" data-key="t-register">Register</span>
@@ -1241,32 +1240,36 @@
 
                 <div class="flex flex-col gap-2 py-4 md:flex-row md:items-center print:hidden">
                     <div class="grow">
-                        <h5 class="text-16">Monthly Calendar</h5>
+                        <h5 class="text-16">Funnel Charts</h5>
                     </div>
                     <ul class="flex items-center gap-2 text-sm font-normal shrink-0">
                         <li class="relative before:content-['\ea54'] before:font-remix ltr:before:-right-1 rtl:before:-left-1  before:absolute before:text-[18px] before:-top-[3px] ltr:pr-4 rtl:pl-4 before:text-slate-400 dark:text-zink-200">
-                            <a href="#!" class="text-slate-400 dark:text-zink-200">Calendar</a>
+                            <a href="#!" class="text-slate-400 dark:text-zink-200">Apexcharts</a>
                         </li>
                         <li class="text-slate-700 dark:text-zink-100">
-                            Monthly Calendar
+                            Funnel Charts
                         </li>
                     </ul>
                 </div>
-
-                <div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12">
-                    <div class="xl:col-span-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <button type="hidden" id="calendarBtn" data-modal-target="event-modal"></button>
-                                <div id='calendar'></div>
-                            </div>
+                <div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-15">Basic</h6>
+                            <div id="basicFunnel" class="apex-charts" data-chart-colors='["bg-custom-500"]' dir="ltr"></div>
                         </div>
-                    </div><!--end col-->
+                    </div><!--end card-->
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-15">Pyramid</h6>
+                            <div id="pyramidChart" class="apex-charts" data-chart-colors='["bg-custom-500", "bg-custom-400", "bg-custom-300", "bg-custom-200", "bg-purple-200", "bg-purple-300", "bg-purple-400", "bg-purple-500"]' dir="ltr"></div>
+                        </div>
+                    </div><!--end card-->
                 </div><!--end grid-->
+
             </div>
             <!-- container-fluid -->
         </div>
-        <!-- End Page-content -->
+        <!-- End page-wrapper -->
 
         <footer class="ltr:md:left-vertical-menu rtl:md:right-vertical-menu group-data-[sidebar-size=md]:ltr:md:left-vertical-menu-md group-data-[sidebar-size=md]:rtl:md:right-vertical-menu-md group-data-[sidebar-size=sm]:ltr:md:left-vertical-menu-sm group-data-[sidebar-size=sm]:rtl:md:right-vertical-menu-sm absolute right-0 bottom-0 px-4 h-14 group-data-[layout=horizontal]:ltr:left-0  group-data-[layout=horizontal]:rtl:right-0 left-0 border-t py-3 flex items-center dark:border-zink-600">
             <div class="group-data-[layout=horizontal]:mx-auto group-data-[layout=horizontal]:max-w-screen-2xl w-full">
@@ -1282,46 +1285,11 @@
                 </div>
             </div>
         </footer>
-        </div>
+    </div>
 
 </div>
 <!-- end main content -->
 
-<div id="event-modal" modal-center="" class="fixed flex flex-col hidden transition-all duration-300 ease-in-out left-2/4 z-drawer -translate-x-2/4 -translate-y-2/4 ">
-    <div class="w-screen md:w-[30rem] bg-white shadow rounded-md dark:bg-zink-600">
-        <div class="flex items-center justify-between p-4 border-b dark:border-zink-500">
-            <h5 class="text-16" id="modal-title">Add Event</h5>
-            <button data-modal-close="event-modal" id="eventModal-close" class="transition-all duration-200 ease-linear text-slate-400 hover:text-red-500"><i data-lucide="x" class="w-5 h-5"></i></button>
-        </div>
-        <div class="max-h-[calc(theme('height.screen')_-_180px)] p-4 overflow-y-auto">
-            <form class="needs-validation" name="event-form" id="form-event" autocomplete="off">
-                <div class="grid grid-cols-1 gap-4 xl:grid-cols-12">
-                    <div class="xl:col-span-12">
-                        <label for="event-title" class="inline-block mb-2 text-base font-medium">Event Name</label>
-                        <input type="text" id="event-title" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Event name" required="">
-                    </div>
-                    <div class="xl:col-span-12">
-                        <label for="event-category" class="inline-block mb-2 text-base font-medium">Category</label>
-                        <select required="" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" name="event-category" id="event-category">
-                            <option>Select Category</option>
-                            <option selected="" value="fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event transition-all w-[100%] text-custom-500 !bg-custom-100 dark:!bg-custom-500/20 border-none rounded-md py-1.5 px-3">Primary</option>
-                            <option value="fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-green-500 w-[100%] !bg-green-100 dark:!bg-green-500/20 border-none rounded-md py-1.5 px-3">Success</option>
-                            <option value="fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-sky-500 w-[100%] !bg-sky-100 dark:!bg-sky-500/20 border-none rounded-md py-1.5 px-3">Info</option>
-                            <option value="fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event text-yellow-500 w-[100%] !bg-yellow-100 dark:!bg-yellow-500/20 border-none rounded-md py-1.5 px-3">Warning</option>
-                            <option value="fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event w-[100%] text-purple-500 !bg-purple-100 dark:!bg-purple-500/20 border-none rounded-md py-1.5 px-3">Purple</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="flex justify-end gap-2 mt-4">
-                    <button type="reset" data-modal-close="event-modal" class="text-red-500 bg-white btn hover:text-red-500 hover:bg-red-100 focus:text-red-500 focus:bg-red-100 active:text-red-500 active:bg-red-100 dark:bg-zink-600 dark:hover:bg-red-500/10 dark:focus:bg-red-500/10 dark:active:bg-red-500/10">Cancel</button>
-                    <button type="reset" id="btn-delete-event" data-modal-close="event-modal" class="hidden text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Delete</button>
-                    <button type="submit" id="btn-save-event" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add Order</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- end event modal -->
 <div class="fixed items-center hidden bottom-6 right-12 h-header group-data-[navbar=hidden]:flex">
     <button data-drawer-target="customizerButton" type="button" class="inline-flex items-center justify-center w-12 h-12 p-0 transition-all duration-200 ease-linear rounded-md shadow-lg text-sky-50 bg-sky-500">
         <i data-lucide="settings" class="inline-block w-5 h-5"></i>
@@ -1527,9 +1495,11 @@
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/lucide/umd/lucide.js"></script>
 <script src="assets/js/starcode.bundle.js"></script>
-<!-- calendar min js -->
-<script src="assets/libs/fullcalendar/index.global.min.js"></script>
-<script src="assets/js/pages/apps-calendar-month-grid.init.js"></script>
+<!-- apexcharts js -->
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+<!-- Funnel init js-->
+<script src="assets/js/pages/apexcharts-funnel.init.js"></script>
 
 <!-- App js -->
 <script src="assets/js/app.js"></script>
