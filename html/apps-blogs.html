@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="overflow-x-hidden scroll-smooth group"
+  data-mode="light"
+  dir="ltr"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Product Landing Page | StarCode & Dashboard Template</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta content="Minimal Admin & Dashboard Template" name="description" />
+    <meta content="StarCode Kh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link
+      href="../../css2?family=Tourney:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../aos%403.0.0-beta.6/dist/aos.css" />
+
+    <!-- Swiper Slider css-->
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Icons CSS -->
+
+    <!-- StarCode CSS -->
+
+    <link rel="stylesheet" href="assets/css/starcode2.css" />
+    <style>
+      .container {
+        display: flex;
+        margin: 20px auto;
+        max-width: 1200px;
+        gap: 20px;
+      }
+
+      .news-section {
+        flex: 3;
+      }
+
+      .news-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 200px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .news-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .news-item img {
+        width: 160px;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      .news-content h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 10px;
+        line-height: 1.4;
+        color: #333;
+      }
+
+      .news-content .meta {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 10px;
+      }
+
+      .news-content p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+
+  <body
+    class="text-base bg-white text-body font-public dark:text-zink-50 dark:bg-zinc-900"
+  >
+    <nav
+      class="fixed inset-x-0 top-0 z-50 flex items-center justify-center h-20 py-3 [&.is-sticky]:bg-white dark:[&.is-sticky]:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 [&.is-sticky]:shadow-lg [&.is-sticky]:shadow-slate-200/25 dark:[&.is-sticky]:shadow-zinc-700/30 navbar"
+      id="navbar"
+    >
+      <div
+        class="container 2xl:max-w-[87.5rem] px-4 mx-auto flex items-center self-center w-full"
+      >
+        <div class="shrink-0">
+          <a href="#!">
+            <img
+              src="assets/images/aeboutique.png"
+              alt=""
+              class="block h-6 dark:hidden"
+            />
+            <img
+              src="assets/images/logo-light.png"
+              alt=""
+              class="hidden h-6 dark:block"
+            />
+          </a>
+        </div>
+        <div class="mx-auto">
+          <ul
+            id="navbar7"
+            class="absolute inset-x-0 z-20 items-center hidden py-3 mt-px bg-white shadow-lg md:mt-0 dark:bg-zinc-800 dark:md:bg-transparent md:z-0 navbar-menu rounded-b-md md:shadow-none md:flex top-full ltr:ml-auto rtl:mr-auto md:relative md:bg-transparent md:rounded-none md:top-auto md:py-0"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-15 font-medium text-slate-800 transition-all duration-300 ease-linear hover:text-custom-500 [&.active]:text-custom-500 dark:text-zinc-200 dark:hover:text-custom-500 dark:[&.active]:text-custom-500 active"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                href="#product"
+                class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-15 font-medium text-slate-800 transition-all duration-300 ease-linear hover:text-custom-500 [&.active]:text-custom-500 dark:text-zinc-200 dark:hover:text-custom-500 dark:[&.active]:text-custom-500"
+                >Sản phẩm
+              </a>
+            </li>
+            <li>
+              <a
+                href="#features"
+                class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-15 font-medium text-slate-800 transition-all duration-300 ease-linear hover:text-custom-500 [&.active]:text-custom-500 dark:text-zinc-200 dark:hover:text-custom-500 dark:[&.active]:text-custom-500"
+                >Liên hệ</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-15 font-medium text-slate-800 transition-all duration-300 ease-linear hover:text-custom-500 [&.active]:text-custom-500 dark:text-zinc-200 dark:hover:text-custom-500 dark:[&.active]:text-custom-500"
+                >Giới thiệu</a
+              >
+            </li>
+            <!-- trang list sản phẩm -->
+            <!-- <li
+              class="relative group-data-[layout=horizontal]:shrink-0 group/sm"
+            >
+              <a
+                class="relative dropdown-button flex items-center ltr:pl-3 rtl:pr-3 ltr:pr-5 rtl:pl-5 mx-3 my-1 group/menu-link text-vertical-menu-item-font-size font-normal transition-all duration-75 ease-linear rounded-md py-2.5 text-vertical-menu-item hover:text-vertical-menu-item-hover hover:bg-vertical-menu-item-bg-hover [&.active]:text-vertical-menu-item-active [&.active]:bg-vertical-menu-item-bg-active group-data-[sidebar=dark]:text-vertical-menu-item-dark group-data-[sidebar=dark]:hover:text-vertical-menu-item-hover-dark group-data-[sidebar=dark]:dark:hover:text-custom-500 group-data-[layout=horizontal]:dark:hover:text-custom-500 group-data-[sidebar=dark]:hover:bg-vertical-menu-item-bg-hover-dark group-data-[sidebar=dark]:dark:hover:bg-zink-600 group-data-[sidebar=dark]:[&.active]:text-vertical-menu-item-active-dark group-data-[sidebar=dark]:[&.active]:bg-vertical-menu-item-bg-active-dark group-data-[sidebar=brand]:text-vertical-menu-item-brand group-data-[sidebar=brand]:hover:text-vertical-menu-item-hover-brand group-data-[sidebar=brand]:hover:bg-vertical-menu-item-bg-hover-brand group-data-[sidebar=brand]:[&.active]:bg-vertical-menu-item-bg-active-brand group-data-[sidebar=brand]:[&.active]:text-vertical-menu-item-active-brand group-data-[sidebar=modern]:text-vertical-menu-item-modern group-data-[sidebar=modern]:hover:bg-vertical-menu-item-bg-hover-modern group-data-[sidebar=modern]:hover:text-vertical-menu-item-hover-modern group-data-[sidebar=modern]:[&.active]:bg-vertical-menu-item-bg-active-modern group-data-[sidebar=modern]:[&.active]:text-vertical-menu-item-active-modern group-data-[sidebar-size=md]:block group-data-[sidebar-size=md]:text-center group-data-[sidebar-size=sm]:group-hover/sm:w-[calc(theme('spacing.vertical-menu-sm')_*_3.63)] group-data-[sidebar-size=sm]:group-hover/sm:bg-vertical-menu group-data-[sidebar-size=sm]:group-data-[sidebar=dark]:group-hover/sm:bg-vertical-menu-dark group-data-[sidebar-size=sm]:group-data-[sidebar=modern]:group-hover/sm:bg-vertical-menu-border-modern group-data-[sidebar-size=sm]:group-data-[sidebar=brand]:group-hover/sm:bg-vertical-menu-brand group-data-[sidebar-size=sm]:my-0 group-data-[sidebar-size=sm]:rounded-b-none group-data-[layout=horizontal]:m-0 group-data-[layout=horizontal]:ltr:pr-8 group-data-[layout=horizontal]:rtl:pl-8 group-data-[layout=horizontal]:hover:bg-transparent group-data-[layout=horizontal]:[&.active]:bg-transparent [&.dropdown-button]:before:absolute [&.dropdown-button]:[&.show]:before:content-['\ea4e'] [&.dropdown-button]:before:content-['\ea6e'] [&.dropdown-button]:before:font-remix ltr:[&.dropdown-button]:before:right-2 rtl:[&.dropdown-button]:before:left-2 [&.dropdown-button]:before:text-16 group-data-[sidebar-size=sm]:[&.dropdown-button]:before:hidden group-data-[sidebar-size=md]:[&.dropdown-button]:before:hidden group-data-[sidebar=dark]:dark:text-zink-200 group-data-[layout=horizontal]:dark:text-zink-200 group-data-[sidebar=dark]:[&.active]:dark:bg-zink-600 group-data-[layout=horizontal]:dark:[&.active]:text-custom-500 rtl:[&.dropdown-button]:before:rotate-180 group-data-[layout=horizontal]:[&.dropdown-button]:before:rotate-90 group-data-[layout=horizontal]:[&.dropdown-button]:[&.show]:before:rotate-0 rtl:[&.dropdown-button]:[&.show]:before:rotate-0"
+                href="pages-pricing.html"
+              >
+                <span
+                  class="group-data-[sidebar-size=sm]:ltr:pl-10 group-data-[sidebar-size=sm]:rtl:pr-10 align-middle group-data-[sidebar-size=sm]:group-hover/sm:block group-data-[sidebar-size=sm]:hidden"
+                  data-key="t-authentication"
+                  >Products</span
+                >
+              </a>
+            </li> -->
+            <li>
+              <a
+                href="pages-pricing.html"
+                class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-15 font-medium text-slate-800 transition-all duration-300 ease-linear hover:text-custom-500 [&.active]:text-custom-500 dark:text-zinc-200 dark:hover:text-custom-500 dark:[&.active]:text-custom-500"
+                >Products</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex gap-2">
+          <div class="ltr:ml-auto rtl:mr-auto md:hidden navbar-toggale-button">
+            <button
+              type="button"
+              class="flex items-center justify-center size-[37.5px] p-0 text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"
+            >
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+
+          <div class="flex gap-3 ms-auto">
+            <div class="relative flex items-center dropdown h-header">
+              <button
+                type="button"
+                class="inline-flex justify-center items-center p-0 text-topbar-item transition-all w-[37.5px] h-[37.5px] duration-200 ease-linear bg-topbar rounded-md dropdown-toggle btn hover:bg-topbar-item-bg-hover hover:text-topbar-item-hover group-data-[topbar=dark]:bg-topbar-dark group-data-[topbar=dark]:hover:bg-topbar-item-bg-hover-dark group-data-[topbar=dark]:hover:text-topbar-item-hover-dark group-data-[topbar=brand]:bg-topbar-brand group-data-[topbar=brand]:hover:bg-topbar-item-bg-hover-brand group-data-[topbar=brand]:hover:text-topbar-item-hover-brand group-data-[topbar=dark]:dark:bg-zink-700 group-data-[topbar=dark]:dark:hover:bg-zink-600 group-data-[topbar=dark]:dark:text-zink-500 group-data-[topbar=dark]:dark:hover:text-zink-50"
+                id="flagsDropdown"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="assets/images/us.svg"
+                  alt=""
+                  id="header-lang-img"
+                  class="h-5 rounded-sm"
+                />
+              </button>
+              <div
+                class="absolute z-50 hidden p-4 ltr:text-left rtl:text-right bg-white rounded-md shadow-md !top-4 dropdown-menu min-w-[10rem] flex flex-col gap-4 dark:bg-zink-600"
+                aria-labelledby="flagsDropdown"
+              >
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="en"
+                  title="English"
+                >
+                  <img
+                    src="assets/images/us.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    English
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="sp"
+                  title="Spanish"
+                >
+                  <img
+                    src="assets/images/es.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    Spanish
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="gr"
+                  title="German"
+                >
+                  <img
+                    src="assets/images/de.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    German
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="fr"
+                  title="French"
+                >
+                  <img
+                    src="assets/images/fr.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    French
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="jp"
+                  title="Japanese"
+                >
+                  <img
+                    src="assets/images/jp.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    Japanese
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="ch"
+                  title="Chinese"
+                >
+                  <img
+                    src="assets/images/china.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    Chinese
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="it"
+                  title="Italian"
+                >
+                  <img
+                    src="assets/images/it2.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    Italian
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="ru"
+                  title="Russian"
+                >
+                  <img
+                    src="assets/images/ru2.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    Russian
+                  </h6>
+                </a>
+                <a
+                  href="#!"
+                  class="flex items-center gap-3 group/items language"
+                  data-lang="ar"
+                  title="Arabic"
+                >
+                  <img
+                    src="assets/images/ae2.svg"
+                    alt=""
+                    class="object-cover h-4 rounded-full"
+                  />
+                  <h6
+                    class="transition-all duration-200 ease-linear font-15medium text- text-slate-600 dark:text-zink-200 group-hover/items:text-custom-500"
+                  >
+                    Arabic
+                  </h6>
+                </a>
+              </div>
+            </div>
+
+            <div class="relative flex items-center h-header">
+              <button
+                type="button"
+                data-drawer-target="cartSidePenal"
+                class="inline-flex relative justify-center items-center p-0 text-topbar-item transition-all w-[37.5px] h-[37.5px] duration-200 ease-linear bg-topbar rounded-md btn hover:bg-topbar-item-bg-hover hover:text-topbar-item-hover group-data-[topbar=dark]:bg-topbar-dark group-data-[topbar=dark]:hover:bg-topbar-item-bg-hover-dark group-data-[topbar=dark]:hover:text-topbar-item-hover-dark group-data-[topbar=brand]:bg-topbar-brand group-data-[topbar=brand]:hover:bg-topbar-item-bg-hover-brand group-data-[topbar=brand]:hover:text-topbar-item-hover-brand group-data-[topbar=dark]:dark:bg-zink-700 group-data-[topbar=dark]:dark:hover:bg-zink-600 group-data-[topbar=brand]:text-topbar-item-brand group-data-[topbar=dark]:dark:hover:text-zink-50 group-data-[topbar=dark]:dark:text-zink-200 group-data-[topbar=dark]:text-topbar-item-dark"
+              >
+                <i
+                  data-lucide="shopping-cart"
+                  class="inline-block w-5 h-5 stroke-1 fill-slate-100 group-data-[topbar=dark]:fill-topbar-item-bg-hover-dark group-data-[topbar=brand]:fill-topbar-item-bg-hover-brand"
+                ></i>
+                <span
+                  class="absolute flex items-center justify-center w-[16px] h-[16px] text-xs text-white bg-red-400 border-white rounded-full -top-1 -right-1"
+                  >4</span
+                >
+              </button>
+            </div>
+
+            <div class="relative flex items-center dropdown h-header">
+              <button
+                type="button"
+                class="inline-flex justify-center relative items-center p-0 text-topbar-item transition-all w-[37.5px] h-[37.5px] duration-200 ease-linear bg-topbar rounded-md dropdown-toggle btn hover:bg-topbar-item-bg-hover hover:text-topbar-item-hover group-data-[topbar=dark]:bg-topbar-dark group-data-[topbar=dark]:hover:bg-topbar-item-bg-hover-dark group-data-[topbar=dark]:hover:text-topbar-item-hover-dark group-data-[topbar=brand]:bg-topbar-brand group-data-[topbar=brand]:hover:bg-topbar-item-bg-hover-brand group-data-[topbar=brand]:hover:text-topbar-item-hover-brand group-data-[topbar=dark]:dark:bg-zink-700 group-data-[topbar=dark]:dark:hover:bg-zink-600 group-data-[topbar=brand]:text-topbar-item-brand group-data-[topbar=dark]:dark:hover:text-zink-50 group-data-[topbar=dark]:dark:text-zink-200 group-data-[topbar=dark]:text-topbar-item-dark"
+                id="notificationDropdown"
+                data-bs-toggle="dropdown"
+              >
+                <i
+                  data-lucide="bell-ring"
+                  class="inline-block w-5 h-5 stroke-1 fill-slate-100 group-data-[topbar=dark]:fill-topbar-item-bg-hover-dark group-data-[topbar=brand]:fill-topbar-item-bg-hover-brand"
+                ></i>
+                <span class="absolute top-0 right-0 flex w-1.5 h-1.5">
+                  <span
+                    class="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-sky-400"
+                  ></span>
+                  <span
+                    class="relative inline-flex w-1.5 h-1.5 rounded-full bg-sky-500"
+                  ></span>
+                </span>
+              </button>
+              <div
+                class="absolute z-50 hidden ltr:text-left rtl:text-right bg-white rounded-md shadow-md !top-4 dropdown-menu min-w-[20rem] lg:min-w-[26rem] dark:bg-zink-600"
+                aria-labelledby="notificationDropdown"
+              >
+                <div class="p-4">
+                  <h6 class="mb-4 text-16">
+                    Notifications
+                    <span
+                      class="inline-flex items-center justify-center w-5 h-5 ml-1 text-[11px] font-medium border rounded-full text-white bg-orange-500 border-orange-500"
+                      >15</span
+                    >
+                  </h6>
+                  <ul
+                    class="flex flex-wrap w-full p-1 mb-2 text-sm font-medium text-center rounded-md filter-btns text-slate-500 bg-slate-100 nav-tabs dark:bg-zink-500 dark:text-zink-200"
+                    data-filter-target="notification-list"
+                  >
+                    <li class="grow">
+                      <a
+                        href="javascript:void(0);"
+                        data-filter="all"
+                        class="inline-block nav-link px-1.5 w-full py-1 text-xs transition-all duration-300 ease-linear rounded-md text-slate-500 border border-transparent [&.active]:bg-white [&.active]:text-custom-500 hover:text-custom-500 active:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:[&.active]:bg-zink-600 -mb-[1px] active"
+                        >View All</a
+                      >
+                    </li>
+                    <li class="grow">
+                      <a
+                        href="javascript:void(0);"
+                        data-filter="mention"
+                        class="inline-block nav-link px-1.5 w-full py-1 text-xs transition-all duration-300 ease-linear rounded-md text-slate-500 border border-transparent [&.active]:bg-white [&.active]:text-custom-500 hover:text-custom-500 active:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:[&.active]:bg-zink-600 -mb-[1px]"
+                        >Mentions</a
+                      >
+                    </li>
+                    <li class="grow">
+                      <a
+                        href="javascript:void(0);"
+                        data-filter="follower"
+                        class="inline-block nav-link px-1.5 w-full py-1 text-xs transition-all duration-300 ease-linear rounded-md text-slate-500 border border-transparent [&.active]:bg-white [&.active]:text-custom-500 hover:text-custom-500 active:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:[&.active]:bg-zink-600 -mb-[1px]"
+                        >Followers</a
+                      >
+                    </li>
+                    <li class="grow">
+                      <a
+                        href="javascript:void(0);"
+                        data-filter="invite"
+                        class="inline-block nav-link px-1.5 w-full py-1 text-xs transition-all duration-300 ease-linear rounded-md text-slate-500 border border-transparent [&.active]:bg-white [&.active]:text-custom-500 hover:text-custom-500 active:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:[&.active]:bg-zink-600 -mb-[1px]"
+                        >Invites</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div data-simplebar="" class="max-h-[350px]">
+                  <div class="flex flex-col gap-1" id="notification-list">
+                    <a
+                      href="#!"
+                      class="flex gap-3 p-4 product-item hover:bg-slate-50 dark:hover:bg-zink-500 follower"
+                    >
+                      <div class="w-10 h-10 rounded-md shrink-0 bg-slate-100">
+                        <img
+                          src="assets/images/avatar-3.png"
+                          alt=""
+                          class="rounded-md"
+                        />
+                      </div>
+                      <div class="grow">
+                        <h6 class="mb-1 font-medium">
+                          <b>@willie_passem</b> followed you
+                        </h6>
+                        <p
+                          class="mb-0 text-sm text-slate-500 dark:text-zink-300"
+                        >
+                          <i
+                            data-lucide="clock"
+                            class="inline-block w-3.5 h-3.5 mr-1"
+                          ></i>
+                          <span class="align-middle">Wednesday 03:42 PM</span>
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center self-start gap-2 text-xs text-slate-500 shrink-0 dark:text-zink-300"
+                      >
+                        <div
+                          class="w-1.5 h-1.5 bg-custom-500 rounded-full"
+                        ></div>
+                        4 sec
+                      </div>
+                    </a>
+                    <a
+                      href="#!"
+                      class="flex gap-3 p-4 product-item hover:bg-slate-50 dark:hover:bg-zink-500 mention"
+                    >
+                      <div class="w-10 h-10 bg-yellow-100 rounded-md shrink-0">
+                        <img
+                          src="assets/images/avatar-5.png"
+                          alt=""
+                          class="rounded-md"
+                        />
+                      </div>
+                      <div class="grow">
+                        <h6 class="mb-1 font-medium">
+                          <b>@caroline_jessica</b> commented on your post
+                        </h6>
+                        <p
+                          class="mb-3 text-sm text-slate-500 dark:text-zink-300"
+                        >
+                          <i
+                            data-lucide="clock"
+                            class="inline-block w-3.5 h-3.5 mr-1"
+                          ></i>
+                          <span class="align-middle">Wednesday 03:42 PM</span>
+                        </p>
+                        <div
+                          class="p-2 rounded bg-slate-100 text-slate-500 dark:bg-zink-500 dark:text-zink-300"
+                        >
+                          Amazing! Fast, to the point, professional and really
+                          amazing to work with them!!!
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center self-start gap-2 text-xs text-slate-500 shrink-0 dark:text-zink-300"
+                      >
+                        <div
+                          class="w-1.5 h-1.5 bg-custom-500 rounded-full"
+                        ></div>
+                        15 min
+                      </div>
+                    </a>
+                    <a
+                      href="#!"
+                      class="flex gap-3 p-4 product-item hover:bg-slate-50 dark:hover:bg-zink-500 invite"
+                    >
+                      <div
+                        class="flex items-center justify-center w-10 h-10 bg-red-100 rounded-md shrink-0"
+                      >
+                        <i
+                          data-lucide="shopping-bag"
+                          class="w-5 h-5 text-red-500 fill-red-200"
+                        ></i>
+                      </div>
+                      <div class="grow">
+                        <h6 class="mb-1 font-medium">
+                          Successfully purchased a business plan for
+                          <span class="text-red-500">$199.99</span>
+                        </h6>
+                        <p
+                          class="mb-0 text-sm text-slate-500 dark:text-zink-300"
+                        >
+                          <i
+                            data-lucide="clock"
+                            class="inline-block w-3.5 h-3.5 mr-1"
+                          ></i>
+                          <span class="align-middle">Monday 11:26 AM</span>
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center self-start gap-2 text-xs text-slate-500 shrink-0 dark:text-zink-300"
+                      >
+                        <div
+                          class="w-1.5 h-1.5 bg-custom-500 rounded-full"
+                        ></div>
+                        Yesterday
+                      </div>
+                    </a>
+                    <a
+                      href="#!"
+                      class="flex gap-3 p-4 product-item hover:bg-slate-50 dark:hover:bg-zink-500 mention"
+                    >
+                      <div class="relative shrink-0">
+                        <div class="w-10 h-10 bg-pink-100 rounded-md">
+                          <img
+                            src="assets/images/avatar-7.png"
+                            alt=""
+                            class="rounded-md"
+                          />
+                        </div>
+                        <div
+                          class="absolute text-orange-500 -bottom-0.5 -right-0.5 text-16"
+                        >
+                          <i class="ri-heart-fill"></i>
+                        </div>
+                      </div>
+                      <div class="grow">
+                        <h6 class="mb-1 font-medium">
+                          <b>@scott</b> liked your post
+                        </h6>
+                        <p
+                          class="mb-0 text-sm text-slate-500 dark:text-zink-300"
+                        >
+                          <i
+                            data-lucide="clock"
+                            class="inline-block w-3.5 h-3.5 mr-1"
+                          ></i>
+                          <span class="align-middle">Thursday 06:59 AM</span>
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center self-start gap-2 text-xs text-slate-500 shrink-0 dark:text-zink-300"
+                      >
+                        <div
+                          class="w-1.5 h-1.5 bg-custom-500 rounded-full"
+                        ></div>
+                        1 Week
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-2 p-4 border-t border-slate-200 dark:border-zink-500"
+                >
+                  <div class="grow">
+                    <a href="#!">Manage Notification</a>
+                  </div>
+                  <div class="shrink-0">
+                    <button
+                      type="button"
+                      class="px-2 py-1.5 text-xs text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100"
+                    >
+                      View All Notification
+                      <i
+                        data-lucide="move-right"
+                        class="inline-block w-3.5 h-3.5 ml-1"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative items-center hidden h-header md:flex">
+              <button
+                data-drawer-target="customizerButton"
+                type="button"
+                class="inline-flex justify-center items-center p-0 text-topbar-item transition-all w-[37.5px] h-[37.5px] duration-200 ease-linear bg-topbar group-data-[topbar=dark]:text-topbar-item-dark rounded-md btn hover:bg-topbar-item-bg-hover hover:text-topbar-item-hover group-data-[topbar=dark]:bg-topbar-dark group-data-[topbar=dark]:hover:bg-topbar-item-bg-hover-dark group-data-[topbar=dark]:hover:text-topbar-item-hover-dark group-data-[topbar=brand]:bg-topbar-brand group-data-[topbar=brand]:hover:bg-topbar-item-bg-hover-brand group-data-[topbar=brand]:hover:text-topbar-item-hover-brand group-data-[topbar=dark]:dark:bg-zink-700 group-data-[topbar=dark]:dark:hover:bg-zink-600 group-data-[topbar=brand]:text-topbar-item-brand group-data-[topbar=dark]:dark:hover:text-zink-50 group-data-[topbar=dark]:dark:text-zink-200"
+              >
+                <i
+                  data-lucide="settings"
+                  class="inline-block w-5 h-5 stroke-1 fill-slate-100 group-data-[topbar=dark]:fill-topbar-item-bg-hover-dark group-data-[topbar=brand]:fill-topbar-item-bg-hover-brand"
+                ></i>
+              </button>
+            </div>
+
+            <div class="relative flex items-center dropdown h-header">
+              <button
+                type="button"
+                class="inline-block p-0 transition-all duration-200 ease-linear bg-topbar rounded-full text-topbar-item dropdown-toggle btn hover:bg-topbar-item-bg-hover hover:text-topbar-item-hover group-data-[topbar=dark]:text-topbar-item-dark group-data-[topbar=dark]:bg-topbar-dark group-data-[topbar=dark]:hover:bg-topbar-item-bg-hover-dark group-data-[topbar=dark]:hover:text-topbar-item-hover-dark group-data-[topbar=brand]:bg-topbar-brand group-data-[topbar=brand]:hover:bg-topbar-item-bg-hover-brand group-data-[topbar=brand]:hover:text-topbar-item-hover-brand group-data-[topbar=dark]:dark:bg-zink-700 group-data-[topbar=dark]:dark:hover:bg-zink-600 group-data-[topbar=brand]:text-topbar-item-brand group-data-[topbar=dark]:dark:hover:text-zink-50 group-data-[topbar=dark]:dark:text-zink-200"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+              >
+                <div class="bg-pink-100 rounded-full">
+                  <img
+                    src="assets/images/profile.png"
+                    alt=""
+                    class="w-[37.5px] h-[37.5px] rounded-full"
+                  />
+                </div>
+              </button>
+              <div
+                class="absolute z-50 hidden p-4 ltr:text-left rtl:text-right bg-white rounded-md shadow-md !top-4 dropdown-menu min-w-[14rem] dark:bg-zink-600"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <h6
+                  class="mb-2 text-sm font-normal text-slate-500 dark:text-zink-300"
+                >
+                  Welcome to starcode
+                </h6>
+                <a href="#!" class="flex gap-3 mb-3">
+                  <div class="relative inline-block shrink-0">
+                    <div class="rounded bg-slate-100 dark:bg-zink-500">
+                      <img
+                        src="assets/images/profile.png"
+                        alt=""
+                        class="w-12 h-12 rounded"
+                      />
+                    </div>
+                    <span
+                      class="-top-1 ltr:-right-1 rtl:-left-1 absolute w-2.5 h-2.5 bg-green-400 border-2 border-white rounded-full dark:border-zink-600"
+                    ></span>
+                  </div>
+                  <div>
+                    <h6 class="mb-1 text-15">StarCode Kh</h6>
+                    <p class="text-slate-500 dark:text-zink-300">
+                      Web Developer
+                    </p>
+                  </div>
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
+                      href="pages-account-settings.html"
+                      ><i
+                        data-lucide="user-2"
+                        class="inline-block size-4 ltr:mr-2 rtl:ml-2"
+                      ></i>
+                      Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
+                      href="apps-mailbox.html"
+                      ><i
+                        data-lucide="mail"
+                        class="inline-block size-4 ltr:mr-2 rtl:ml-2"
+                      ></i>
+                      Inbox
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 ltr:ml-2 rtl:mr-2 text-[11px] font-medium border rounded-full text-white bg-red-500 border-red-500"
+                        >15</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
+                      href="apps-chat.html"
+                      ><i
+                        data-lucide="messages-square"
+                        class="inline-block size-4 ltr:mr-2 rtl:ml-2"
+                      ></i>
+                      Chat</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
+                      href="pages-pricing.html"
+                      ><i
+                        data-lucide="gem"
+                        class="inline-block size-4 ltr:mr-2 rtl:ml-2"
+                      ></i>
+                      Upgrade
+                      <span
+                        class="inline-flex items-center justify-center w-auto h-5 ltr:ml-2 rtl:mr-2 px-1 text-[12px] font-medium border rounded text-white bg-sky-500 border-sky-500"
+                        >Pro</span
+                      ></a
+                    >
+                  </li>
+                  <li
+                    class="pt-2 mt-2 border-t border-slate-200 dark:border-zink-500"
+                  >
+                    <a
+                      class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
+                      href="auth-logout-basic.html"
+                      ><i
+                        data-lucide="log-out"
+                        class="inline-block size-4 ltr:mr-2 rtl:ml-2"
+                      ></i>
+                      Sign Out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br /><br /><br /><br />
+    <div class="container">
+      <div class="news-section">
+        <a href="bai-viet-1.html" class="news-item">
+          <img src="./assets/images/small/img-10.jpg" alt="Honda X-ADV" />
+          <div class="news-content">
+            <h3>Top 5 mẫu áo khoác nữ mùa đông 2024 không thể bỏ qua</h3>
+            <p class="meta">Thời Trang Shop • 25/11/2024 • 10</p>
+            <p>
+              Khám phá những mẫu áo khoác nữ mùa đông với thiết kế thời
+              thượng...
+            </p>
+          </div>
+        </a>
+        <a href="bai-viet-2.html" class="news-item">
+          <img src="./assets/images/small/img-2.jpg" alt="Honda CB1000R" />
+          <div class="news-content">
+            <h3>Bộ sưu tập váy dạ tiệc nổi bật cho mùa lễ hội</h3>
+            <p class="meta">Thời Trang Shop • 24/11/2024 • 15</p>
+            <p>Những thiết kế váy dạ tiệc mới nhất, giúp bạn tỏa sáng...</p>
+          </div>
+        </a>
+        <a href="bai-viet-2.html" class="news-item">
+          <img src="./assets/images/small/img-2.jpg" alt="Honda CB1000R" />
+          <div class="news-content">
+            <h3>Phụ kiện thời trang: Xu hướng nổi bật 2024</h3>
+            <p class="meta">Thời Trang Shop • 23/11/2024 • 8</p>
+            <p>Cùng khám phá các mẫu túi xách, giày dép, và phụ kiện...</p>
+          </div>
+        </a>
+        <a href="bai-viet-2.html" class="news-item">
+          <img src="./assets/images/small/img-2.jpg" alt="Honda CB1000R" />
+          <div class="news-content">
+            <h3>Phụ kiện thời trang: Xu hướng nổi bật 2024</h3>
+            <p class="meta">Thời Trang Shop • 23/11/2024 • 8</p>
+            <p>Cùng khám phá các mẫu túi xách, giày dép, và phụ kiện...</p>
+          </div>
+        </a>
+        <a href="bai-viet-2.html" class="news-item">
+          <img src="./assets/images/small/img-2.jpg" alt="Honda CB1000R" />
+          <div class="news-content">
+            <h3>Phụ kiện thời trang: Xu hướng nổi bật 2024</h3>
+            <p class="meta">Thời Trang Shop • 23/11/2024 • 8</p>
+            <p>Cùng khám phá các mẫu túi xách, giày dép, và phụ kiện...</p>
+          </div>
+        </a>
+        <a href="bai-viet-2.html" class="news-item">
+          <img src="./assets/images/small/img-2.jpg" alt="Honda CB1000R" />
+          <div class="news-content">
+            <h3>Phụ kiện thời trang: Xu hướng nổi bật 2024</h3>
+            <p class="meta">Thời Trang Shop • 23/11/2024 • 8</p>
+            <p>Cùng khám phá các mẫu túi xách, giày dép, và phụ kiện...</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <footer
+      class="relative pt-20 pb-12 border-t border-slate-200 dark:border-zinc-800"
+    >
+      <div
+        class="absolute left-0 bg-purple-500 size-64 -top-16 opacity-10 blur-3xl"
+      ></div>
+      <div class="container 2xl:max-w-[87.5rem] px-4 mx-auto">
+        <div class="relative z-10 grid grid-cols-12 gap-5 xl:grid-cols-12">
+          <div class="col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-4">
+            <div class="mb-5">
+              <a href="#!"
+                ><img
+                  src="assets/images/logo-light.png"
+                  alt=""
+                  class="hidden h-7 dark:block"
+              /></a>
+              <a href="#!"
+                ><img
+                  src="assets/images/aeboutique.png"
+                  alt=""
+                  class="block h-7 dark:hidden"
+              /></a>
+            </div>
+            <p class="mb-5 text-slate-500 dark:text-zinc-400">
+              Premium Multipurpose Admin & Dashboard Template You can build any
+              type of web application like eCommerce, CRM, CMS, Project
+              management apps, Admin Panels, etc using starcode.
+            </p>
+            <ul class="flex items-center gap-3">
+              <li>
+                <a
+                  href="#!"
+                  class="flex items-center justify-center transition-all duration-200 ease-linear border rounded-full size-10 text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500"
+                  ><i data-lucide="facebook" class="size-4"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="flex items-center justify-center transition-all duration-200 ease-linear border rounded-full size-10 text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500"
+                  ><i data-lucide="linkedin" class="size-4"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="flex items-center justify-center transition-all duration-200 ease-linear border rounded-full size-10 text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500"
+                  ><i data-lucide="instagram" class="size-4"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="flex items-center justify-center transition-all duration-200 ease-linear border rounded-full size-10 text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500"
+                  ><i data-lucide="twitter" class="size-4"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="flex items-center justify-center transition-all duration-200 ease-linear border rounded-full size-10 text-slate-500 border-slate-200 dark:text-zinc-400 dark:border-zinc-800 hover:text-custom-500 dark:hover:text-custom-500"
+                  ><i data-lucide="youtube" class="size-4"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-3">
+            <h5 class="mb-4 font-medium tracking-wider dark:text-zink-50">
+              Dashboards
+            </h5>
+            <ul class="flex flex-col gap-3 text-15">
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Analytics</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >CRM</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Ecommerce</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Email</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >HR</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Social Media</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--end col-->
+          <div class="col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-3">
+            <h5 class="mb-4 font-medium tracking-wider dark:text-zinc-50">
+              About Us
+            </h5>
+            <ul class="flex flex-col gap-3 text-15">
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Our Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Support 24/7</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >FAQ's</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--end col-->
+          <div class="col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-2">
+            <h5 class="mb-4 font-medium tracking-wider dark:text-zink-50">
+              Get Help
+            </h5>
+            <ul class="flex flex-col gap-3 text-15">
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Payment Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="relative inline-block transition-all duration-200 ease-linear text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-50 before:absolute before:border-b before:border-slate-200 dark:before:border-zinc-700 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear"
+                  >Return Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!--end col-->
+        </div>
+        <!--end grid-->
+      </div>
+    </footer>
+
+    <button
+      id="back-to-top"
+      class="fixed flex items-center justify-center text-white bg-purple-500 rounded-md size-10 bottom-10 right-10"
+    >
+      <i data-lucide="chevron-up" class="animate animate-icons"></i>
+    </button>
+
+    <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+    <script src="assets/libs/tippy.js/tippy-bundle.umd.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/prismjs/prism.js"></script>
+    <script src="assets/libs/lucide/umd/lucide.js"></script>
+    <script src="assets/js/starcode.bundle.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/aos/aos.js"></script>
+
+    <script src="assets/js/pages/landing-product.init.js"></script>
+  </body>
+</html>
